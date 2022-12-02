@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.planetsContainer{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: yellow;
+    transform: scaleX(5);
+}
+.planet {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    transform: scaleX(0.2);
+}
+#firstPlanet {
+    background-color: blue;
+}
+#secondPlanet {
+    background-color: red;
+}
+#thirdPlanet {
+    background-color: green;
+}
+.route{
+    width: 100%;
+    height: 100%;
+    animation: rotate 12s infinite linear;
+}
+.planetContainer{
+    animation: correct 12s infinite linear;
+}
+@keyframes rotate{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes correct{
+    0%{
+        transform: rotateZ(360deg);
+    }
+    100%{
+        transform: rotateZ(0deg);
+    }
+
+}
