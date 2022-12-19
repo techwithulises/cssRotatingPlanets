@@ -58,6 +58,20 @@ body{
     left: 42.5px;
     top: 100px;
 }
+.planetIndex{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+#firstPlanetIndex{
+    animation: hideFirstPlanet 12s infinite;
+}
+#secondPlanetIndex{
+    animation: hideSecondPlanet 12s infinite;
+}
+#thirdPlanetIndex{
+    animation: hideThirdPlanet 12s infinite;
+}
 @keyframes rotate{
     0%{
         transform: rotateZ(0deg);
@@ -74,4 +88,37 @@ body{
         transform: rotateZ(0deg);
     }
 
+}
+@keyframes hideFirstPlanet{
+    0%{
+        z-index: 999;
+    }
+    25%{
+        z-index: -999;
+    }
+    100%{
+        z-index: 999;
+    }
+}
+@keyframes hideSecondPlanet{
+    0%{
+        z-index: -999;
+    }
+    50%{
+        z-index: 999;
+    }
+    100%{
+        z-index: -999;
+    }
+}
+@keyframes hideThirdPlanet{
+    0%{
+        z-index: 999;
+    }
+    50%{
+        z-index: -999;
+    }
+    100%{
+        z-index: 999;
+    }
 }
